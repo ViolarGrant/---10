@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  width: 1440px;
+  height: 1024px;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.log_pic {
+  width: 845px;
+  height: 1024px;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  width: 445px;
+  height: 403px;
+  margin-top: 311px;
+  margin-left: 50px;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.log_text {
+  display: flex;
+  width: 100%;
+  height: 71px;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.log_text_1 {
+  font-family: Jost;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 43.35px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #131118;
+}
+
+.log_text_2 {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #a4a1aa;
+}
+
+.log_form {
+  display: flex;
+  width: 445px;
+  height: 216px;
+  gap: 16px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.email_text {
+  font-family: Jost;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.34px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 0px;
+}
+
+.email {
+  width: 445px;
+  height: 56px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #131118;
+}
+
+.email::placeholder {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #131118;
+  padding: 16px 16px 17px 16px;
+}
+
+#password::placeholder {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #131118;
+}
+
+.check {
+  display: flex;
+  width: 100%;
+  height: 24px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checkbox {
+  display: flex;
+  width: 150px;
+  height: 24px;
+  padding: 0px 16px 0px 0px;
+  gap: 10px;
+  align-items: center;
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+#input_check {
+  width: 20px;
+  height: 20px;
+}
+#input_check:checked{
+  accent-color: #131118;
+}
+
+.forgotpass {
+  font-family: Jost;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.23px;
+  text-align: right;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.btn {
+  display: flex;
+  width: 445px;
+  height: 56px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #131118;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_text {
+  padding: 20px;
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: white;
+}
