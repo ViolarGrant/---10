@@ -7,45 +7,59 @@
     <title>Document</title>
   </head>
   <body>
-    <main class="login">
-      <div class="log_pic">
-        <img src="./img/login.png" alt="login" />
-      </div>
-      <div class="login_form">
-        <div class="log_text">
-          <span class="log_text_1"> Welcome 👋 </span>
-          <span class="log_text_2"> Please login here </span>
-        </div>
-        <div class="log_form">
-          <div>
-            <p class="email_text">Email Address</p>
-            <input
-              class="email"
-              type="email"
-              placeholder="robertfox@example.com"
-            />
-          </div>
-          <div>
-            <p class="email_text">Password</p>
-            <input
-              class="email" id="password"
-              type="password"
-              placeholder="••••••••••••••••••"
-            />
-          </div>
-          <div class="check">
-            <div class="checkbox">
-            <input type="checkbox" id="input_check"/>
-            <p>Remember me</p>
-            </div>
-            <p class="forgotpass">Forgot Password?</p>
-          </div>
-        </div>
+    <main>
+      <header>
         <div>
-          <button class="btn"><p class="btn_text">Login</p></button>
+          <a href="#"><img src="/img/Logo + Text.svg" alt="logo" /></a>
         </div>
-      </div>
+        <div class="header_menu">
+          <a href="/html/login.html">Home</a>
+          <a href="">Shop</a>
+          <a href="">Our Story</a>
+          <a href="">Blog</a>
+          <a href="">Contact Us</a>
+        </div>
+        <div class="log">
+          <a href=""><img src="" alt="" /></a
+          ><a href=""><img src="" alt="" /></a
+          ><a href=""><img src="" alt="" /></a>
+          <button
+            class="btn_login"
+            onclick="document.location='html/login.html'"
+          >
+            Login
+          </button>
+        </div>
+      </header>
+      <section class="products">
+        <h1>Товары</h1>
+        <h2>Добавить новый товар</h2>
+        <form id="product_form">
+          <input
+            type="text"
+            id="productName"
+            placeholder="Название товара"
+            required
+          />
+          <input
+            type="text"
+            id="productDescription"
+            placeholder="Описание"
+            required
+          />
+          <input
+            type="text"
+            id="productImage"
+            placeholder="Ссылка на изображение"
+            required
+          />
+          <button type="submit" class="btn_login">Добавить товар</button>
+        </form>
+        <div id="message" style="display: none"></div>
+        <div id="product_list"></div>
+      </section>
+      <footer></footer>
     </main>
-    <script src="/JS/script.js"></script>
+    <script src="/JS/main.js"></script>
   </body>
 </html>
