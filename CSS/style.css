@@ -148,7 +148,27 @@ header {
   align-items: center;
 }
 
+#message_2 {
+  padding: 10px;
+  width: 250px;
+  height: 50px;
+  font-size: 24px;
+  font-family: Poppins;
+  margin-top: 0px;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 400px;
+}
+
 #message.success {
+  background-color: antiquewhite;
+  color: green;
+}
+
+#message_2.success {
   background-color: antiquewhite;
   color: green;
 }

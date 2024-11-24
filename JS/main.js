@@ -23,12 +23,37 @@ function displayProducts(products) {
       <img src="${product.img_product}" alt="${product.name_product}"></img>
       <h3>${product.name_product}</h3>
       <p>${product.desc_product}</p>
-      <button onclick="deleteProduct()" id="delete">Удалить товар</button> 
+      <button class="delete" data-id="${product.id}" id="delete">Удалить товар</button> 
     `;
-    const theFirstChild = productlist.firstChild;
-    productlist.insertBefore(productElement, theFirstChild);
+
+    /*const deleteBtn = productElement.querySelector(".delete");
+    deleteBtn.addEventListener("click", function () {
+      if (confirm("Вы точно хотите удалить этот продукт?")) {
+        productElement.remove();
+      }
+    });*/
+  
+    const deleteBtn = productElement.querySelectorAll(".delete");
+    deleteBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        fetch(
+          `https://673864bf4eb22e24fca7c7b7.mockapi.io/products/${btn.dataset.id}`,
+          {
+            method: "DELETE",
+          }
+        ).then(() => {
+          showMessage_2();
+          getProducts();
+        });
+      });
+    });
+    productlist.appendChild(productElement);
   });
 }
+
+
+
+
 
 async function addProduct(event) {
   event.preventDefault();
@@ -59,12 +84,13 @@ function showMessage(message, type = "success") {
   setTimeout(() => (messageElement.style.display = "none"), 3000);
 }
 
-function deleteProduct() {
-  const product = document.getElementById("prod");
-  product.remove();
+function showMessage_2(message, type = "success") {
+  const messageElement = document.getElementById("message_2");
+  messageElement.textContent = 'товар успешно удален';
+  messageElement.className = type;
+  messageElement.style.display = "flex";
+  setTimeout(() => (messageElement.style.display = "none"), 1000);
 }
-
-
 
 document.getElementById("product_form").addEventListener("submit", addProduct);
 
